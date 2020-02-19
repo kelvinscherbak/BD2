@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>AULA 01</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Modelo de Dados" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="5ad68572-a521-41e5-98ad-293004b9724d" name="ESTADO" objectType="TABLE" physicalName="ESTADO" >
+   <remarks></remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="25f012a7-75ac-42af-ac13-9cb2158c9221" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX3" populated="true" UUID="d3664ed1-cd8d-4fc9-85fb-f1bc6a3b7186" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC4" populated="true" UUID="df64c8b8-5feb-4a2c-83be-a34a6077deb7" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB5" populated="true" UUID="f5338074-1534-430a-bbfe-50e947dff2ce" name="CIDADE" objectType="TABLE" physicalName="CIDADE" >
+   <remarks></remarks>
+   <folder id="FOLTAB51" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL6" populated="true" UUID="378f5421-5af2-45ad-968b-27becfd0d45c" autoIncrement="false" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB53" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB52" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB54" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="0f599ad3-ea4f-4889-9fe8-1be6e17966e6" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC8" populated="true" UUID="df81f9da-df38-408b-9d42-acedbf95e0c6" ascendingOrDescending="UNSPECIFIED" column-ref="COL6" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB9" populated="true" UUID="c035ac55-e1c5-4665-a76a-a49960ccb09b" name="FUNCIONARIO" objectType="TABLE" physicalName="FUNCIONARIO" >
+   <remarks></remarks>
+   <folder id="FOLTAB91" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL10" populated="true" UUID="a1a609b0-8a44-4f6e-9a92-4bb944274810" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB93" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB92" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB94" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX11" populated="true" UUID="3dfec1e3-ab9d-4218-9d21-ea3dde40fd1e" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC12" populated="true" UUID="9823d935-1ba5-440e-a839-ae7b20dd66a1" ascendingOrDescending="UNSPECIFIED" column-ref="COL10" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB13" populated="true" UUID="7a23f509-f9bd-411a-8204-50b1aae188de" name="PRODUTOS" objectType="TABLE" physicalName="PRODUTOS" >
+   <remarks></remarks>
+   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL14" populated="true" UUID="f22076fc-c2da-4e26-ae54-1981b38d4a69" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="9d8a4c3c-2621-4de2-9c1c-531453329f8c" autoIncrement="false" autoIncrementSequenceName="PRODUTOS_NOME_seq" defaultValue="" name="NOME" nullable="0" physicalName="NOME" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="dc88f50a-4a3a-483e-9688-02e274a57dcf" autoIncrement="false" autoIncrementSequenceName="PRODUTOS_PRECO_seq" defaultValue="" name="PRECO" nullable="0" physicalName="PRECO" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
+     <remarks></remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="23573713-ee47-4db2-a663-18cb9beff0de" autoIncrement="false" autoIncrementSequenceName="PRODUTOS_ESTOQUE_seq" defaultValue="" name="ESTOQUE" nullable="0" physicalName="ESTOQUE" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX18" populated="true" UUID="00b044cb-6edf-4e84-9202-09e9201d88da" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC19" populated="true" UUID="627b6e1f-22b3-4cb0-8332-2b74a4c7815e" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB20" populated="true" UUID="30bd82fc-aa83-4783-a1a5-ca9a9639b9db" name="CATEGORIA" objectType="TABLE" physicalName="CATEGORIA" >
+   <remarks></remarks>
+   <folder id="FOLTAB201" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL21" populated="true" UUID="b667fac9-4b6d-4c6b-9575-9ea2302295c1" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB203" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB202" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB204" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX22" populated="true" UUID="f073ea4a-5b57-43a5-91b5-aac1b1a8cce2" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC23" populated="true" UUID="ac8edae4-ed0e-4e96-941f-90fc922f2654" ascendingOrDescending="UNSPECIFIED" column-ref="COL21" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB24" populated="true" UUID="04188063-6fe4-44f5-8e15-ef30a08ae355" name="CAIXA_ITEM" objectType="TABLE" physicalName="CAIXA_ITEM" >
+   <remarks></remarks>
+   <folder id="FOLTAB241" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL25" populated="true" UUID="b44df6b6-d0fc-4321-99df-92f3ed67f0a5" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB243" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB242" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB244" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="c43630e0-7009-4d43-b7c1-c748adb631a7" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC27" populated="true" UUID="0fd5e9e5-62ee-4edf-b70d-722d1d216d82" ascendingOrDescending="UNSPECIFIED" column-ref="COL25" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB28" populated="true" UUID="28ed42e1-cd2e-48bb-8488-7623ead3c578" name="CAIXA" objectType="TABLE" physicalName="CAIXA" >
+   <remarks></remarks>
+   <folder id="FOLTAB281" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL29" populated="true" UUID="1dff34ca-2cd3-4a69-beb8-b7e8a664c07a" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB283" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB282" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB284" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX30" populated="true" UUID="98959001-2229-47e6-912e-ae2eed97e5cf" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC31" populated="true" UUID="7ad7bda4-2321-46f2-92a1-a9ca2af7ce13" ascendingOrDescending="UNSPECIFIED" column-ref="COL29" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB32" populated="true" UUID="2e5cbfa0-3f2b-421e-89e3-649436355698" name="CLIENTE" objectType="TABLE" physicalName="CLIENTE" >
+   <remarks></remarks>
+   <folder id="FOLTAB321" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL33" populated="true" UUID="46d601c4-fa9c-4669-aaac-48b74fcae764" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB323" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB322" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB324" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX34" populated="true" UUID="7fe5df7f-a7a8-4e7d-82b7-e89cd4b9124b" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC35" populated="true" UUID="39455b54-d924-4584-bce3-0fc02c5e62c1" ascendingOrDescending="UNSPECIFIED" column-ref="COL33" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB36" populated="true" UUID="a1a03926-13fd-4941-861f-8a7942ac7ec5" name="VENDA" objectType="TABLE" physicalName="VENDA" >
+   <remarks></remarks>
+   <folder id="FOLTAB361" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL37" populated="true" UUID="b32276cd-dc2f-43b8-9c99-c7777a2bcc35" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB363" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB362" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB364" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX38" populated="true" UUID="571a44a8-cb3b-40cc-b040-0b1c0031e07c" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC39" populated="true" UUID="c2cee4b9-ea89-4fcf-8a6c-d9aaf0af74be" ascendingOrDescending="UNSPECIFIED" column-ref="COL37" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB40" populated="true" UUID="adf4b3f9-9ce8-4c11-bbbc-8276393ecdf3" name="VENDA_ITEM" objectType="TABLE" physicalName="VENDA_ITEM" >
+   <remarks></remarks>
+   <folder id="FOLTAB401" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL41" populated="true" UUID="1a9f4453-a201-400a-864c-75a25f6d8191" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB403" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB402" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB404" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX42" populated="true" UUID="d3f742de-55be-471a-b8d6-e88d17339309" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC43" populated="true" UUID="a76d913e-e3ee-4a5a-a2b4-c8457ecc9d68" ascendingOrDescending="UNSPECIFIED" column-ref="COL41" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB44" populated="true" UUID="e5e92ec1-9c07-48a9-a1fe-65a8cf2a4926" name="CONTAS_RECEBER" objectType="TABLE" physicalName="CONTAS_RECEBER" >
+   <remarks></remarks>
+   <folder id="FOLTAB441" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL45" populated="true" UUID="0347e529-c2bf-4f79-abc7-f549e9f7c8ab" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB443" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB442" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB444" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX46" populated="true" UUID="6245668d-4a84-466c-88ef-50a6ccb6afe5" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC47" populated="true" UUID="032fc701-f933-46af-8890-873c1a636025" ascendingOrDescending="UNSPECIFIED" column-ref="COL45" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB48" populated="true" UUID="3c007840-5310-4c81-9c3c-242315ae071a" name="FORNECEDOR" objectType="TABLE" physicalName="FORNECEDOR" >
+   <remarks></remarks>
+   <folder id="FOLTAB481" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL49" populated="true" UUID="4c11faa4-9a70-476c-baa3-32289308598a" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB483" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB482" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB484" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX50" populated="true" UUID="9604da3b-1c2f-4839-a56d-705e99117734" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC51" populated="true" UUID="d5e82785-5286-40f1-824f-18495ebb7222" ascendingOrDescending="UNSPECIFIED" column-ref="COL49" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB52" populated="true" UUID="9d47e74e-513d-4bd1-9475-8a309471d96e" name="COMPRA" objectType="TABLE" physicalName="COMPRA" >
+   <remarks></remarks>
+   <folder id="FOLTAB521" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL53" populated="true" UUID="c4b82f1e-a6f2-4709-b2b4-0d72e8361044" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB523" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB522" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB524" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX54" populated="true" UUID="3fd9e017-138f-4dc7-87c2-883cce56cca8" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC55" populated="true" UUID="105bdf44-34c5-4cd4-b3f6-a0a1af17a1bc" ascendingOrDescending="UNSPECIFIED" column-ref="COL53" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB56" populated="true" UUID="f657f02e-34ba-4c53-8c76-eeae899eb591" name="COMPRA_ITEM" objectType="TABLE" physicalName="COMPRA_ITEM" >
+   <remarks></remarks>
+   <folder id="FOLTAB561" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL57" populated="true" UUID="d1affe29-f88d-48e8-8ef7-04f8dcd7952d" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB563" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB562" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB564" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX58" populated="true" UUID="b3e30ef6-4167-4a13-9495-635e35898dfe" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC59" populated="true" UUID="6b298a13-d7d1-40a8-9a5a-e25f5df3b36d" ascendingOrDescending="UNSPECIFIED" column-ref="COL57" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB60" populated="true" UUID="16347f70-a0d5-4e75-bcba-3a12024f6974" name="CONTAS_PAGAR" objectType="TABLE" physicalName="CONTAS_PAGAR" >
+   <remarks></remarks>
+   <folder id="FOLTAB601" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL61" populated="true" UUID="e4b1294a-d626-408b-a19d-721253f30e45" autoIncrement="true" autoIncrementSequenceName="ESTADO_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL2" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB603" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB602" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB604" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX62" populated="true" UUID="d4332d2f-7dcd-4f6e-8bb7-04409bad2df6" clustered="false" name="ID" physicalName="ID" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC63" populated="true" UUID="be1190d7-d4f2-496f-bf13-b9a3df30223d" ascendingOrDescending="UNSPECIFIED" column-ref="COL61" name="ID" physicalName="ID" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL64" populated="true" UUID="9f69bd45-303f-475e-8ed6-d30938a5621c" deferrability="7" deleteRule="3" fk-table-ref="TAB5" fkCardinality="7" identifying="false" name="ESTADO_CIDADE_fk" physicalName="ESTADO_CIDADE_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP65" populated="true" UUID="93ce273d-971b-49de-8ed1-582dbcc08938" fk-column-ref="COL6" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.9999999999999998" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="323" y="26" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB5" x="321" y="123" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB9" x="321" y="175" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB13" x="316" y="231" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB20" x="317" y="329" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB24" x="316" y="388" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB28" x="314" y="454" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB32" x="110" y="24" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB36" x="104" y="123" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB40" x="100" y="213" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB44" x="102" y="317" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB48" x="593" y="42" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB52" x="610" y="140" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB56" x="606" y="208" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB60" x="589" y="302" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL64" pkConnection="0.49714285714285716" fkConnection="0.489010989010989" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
