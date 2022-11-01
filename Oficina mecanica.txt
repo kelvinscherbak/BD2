@@ -1,0 +1,78 @@
+-- *Função para obter o nome do cliente através do id da OS*
+DROP FUNCTION IF EXISTS get_nome_cliente_os;
+DELIMITER //	
+CREATE FUNCTION IF NOT EXISTS get_nome_cliente_os(codigo_os INT)
+RETURNS VARCHAR(150) DETERMINISTIC
+BEGIN
+	DECLARE nome_cliente VARCHAR(100);
+	SELECT nome INTO nome_cliente 
+	FROM cliente INNER JOIN ordem_servico 
+	ON cliente.id = ordem_servico.cliente_id 
+	WHERE ordem_servico.id = codigo_os;
+	RETURN nome_cliente;
+   
+END;
+//
+DELIMITER ;
+SELECT get_nome_cliente_os(1);
+
+
+-- *Função para obter o nome do funcionario através do id da OS*
+DROP FUNCTION IF EXISTS get_nome_funcionario_os;
+DELIMITER //	
+CREATE FUNCTION IF NOT EXISTS get_nome_funcionario_os(codigo_os INT)
+RETURNS VARCHAR(150) DETERMINISTIC
+BEGIN
+	DECLARE nome_funcionario VARCHAR(100);
+	SELECT nome INTO nome_funcionario
+	FROM funcionario INNER JOIN ordem_servico 
+	ON funcionario.id = ordem_servico.funcionario_id 
+	WHERE ordem_servico.id = codigo_os;
+	RETURN nome_funcionario;
+END;
+//
+DELIMITER ;
+
+SELECT get_nome_funcionario_os(1) AS "NOME FUNCIONARIO";
+
+-- trigger para impedir a venda fora do horario comercial
+
+DELIMITER // 
+CREATE TRIGGER impedir_vender_horario
+BEFORE INSERT ON icaixa FOR EACH ROW
+BEGIN 
+    IF NOT TIME(current_timestamp) between TIME('08:00:00') and TIME('18:00:00') THEN
+		signal sqlstate '45000' set message_text = 'Venda não permitida. Horario comercial excedido';
+	END IF;
+END;
+//
+DELIMITER ;
+
+
+-- trigger para atualizar estoque
+DELIMITER // 
+CREATE TRIGGER atualiza_estoque
+AFTER INSERT ON item_ordem_servico FOR EACH ROW
+BEGIN 
+	UPDATE peca SET estoque = estoque - new.quantidade WHERE peca.id = new.peca_id;
+END;
+//
+DELIMITER ;
+
+
+
+-- procedure para nao realizar servico para cliente inativo
+DELIMITER //
+CREATE PROCEDURE insercao_servico (id_cliente INT)
+BEGIN
+    DECLARE ativo CHAR; 
+    SELECT cliente.ativo INTO ativo FROM cliente WHERE cliente.id = id_cliente;
+    IF ativo = 'N' THEN
+    BEGIN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'CLIENTE INATIVO';
+    END;
+    END IF;
+    INSERT INTO ordem_servico (cliente_id) VALUES (id_cliente);
+END;
+//
+DELIMITER ;

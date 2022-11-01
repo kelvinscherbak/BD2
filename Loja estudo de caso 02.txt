@@ -1,0 +1,93 @@
+
+-- verifica se um item esta vencido
+DELIMITER //
+CREATE FUNCTION IF NOT EXISTS item_vencido(codigo_item int)
+RETURNS VARCHAR(150) DETERMINISTIC
+BEGIN
+	DECLARE data_validade DATETIME;
+    SELECT DATA_VENCIMENTO INTO data_validade WHERE PRODUTO_ID = codigo_item;
+	IF (data_validade < CURRENT_TIMESTAMP)
+		 RETURN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'produto vencido';
+	END IF;
+    RETURN "PRODUTO VALIDO";
+
+END;
+//
+DELIMITER ;
+
+
+-- RETORNA O NOME DO CLIENTE ATRAVES DO NUMERO DA VENDA
+DROP FUNCTION IF EXISTS get_nome_cliente_venda;
+DELIMITER //	
+CREATE FUNCTION IF NOT EXISTS get_nome_cliente_venda(codigo_venda INT)
+RETURNS VARCHAR(150) DETERMINISTIC
+BEGIN
+	DECLARE nome_cliente VARCHAR(100);
+	SELECT nome INTO nome_cliente 
+	FROM cliente INNER JOIN venda 
+	ON cliente.id = venda.cliente_id 
+	WHERE venda.id = codigo_venda;
+	RETURN nome_cliente;
+   
+END;
+//
+DELIMITER ;
+SELECT get_nome_cliente_venda(3);
+
+
+-- trigger para impedir a venda fora do horario comercial
+
+DELIMITER // 
+CREATE TRIGGER impedir_vender_horario
+BEFORE INSERT ON icaixa FOR EACH ROW
+BEGIN 
+    IF NOT TIME(current_timestamp) between TIME('08:00:00') and TIME('18:00:00') THEN
+		signal sqlstate '45000' set message_text = 'Venda não permitida. Horario comercial excedido';
+	END IF;
+END;
+//
+DELIMITER ;
+
+
+-- IMPEDIR VENDA CLIENTE QUE SEJA INATIVO
+DELIMITER // 
+CREATE TRIGGER impedir_venda_cliente_inativo 
+BEFORE INSERT ON venda FOR EACH ROW
+BEGIN 
+	DECLARE cliente_ativo CHAR(1); 
+    SELECT ativo INTO cliente_ativo FROM cliente WHERE id = new.cliente_id;
+    IF cliente_ativo <> 'S' THEN
+		signal sqlstate '45000' set message_text = 'cliente inativo';
+	END IF;
+END;
+//
+DELIMITER ;
+
+
+-- PROCEDURE PARA ATT O ESTOQUE
+DELIMITER //
+CREATE PROCEDURE insercao_item_venda(id_produto INT, id_venda INT, quantidade INT, preco_unidade DECIMAL(8,2))
+BEGIN
+    INSERT INTO item_venda (produto_id,venda_id,quantidade,preco_unidade) VALUES 
+    (id_produto, id_venda, quantidade, preco_unidade);
+    UPDATE produto SET estoque = (estoque - quantidade) WHERE produto.id = id_produto;
+END;
+//
+DELIMITER ;
+
+
+-- PROCEDURE PARA IMPEDIR VENDA A CLIENTE INATIVO, MESMA SITUAÇÃO DA TRIGGER, POREM EM PROCEDURE
+DELIMITER //
+CREATE PROCEDURE insercao_venda (id_cliente INT)
+BEGIN
+    DECLARE ativo CHAR; 
+    SELECT cliente.ativo INTO ativo FROM cliente WHERE cliente.id = id_cliente;
+    IF ativo = 'N' THEN
+    BEGIN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'CLIENTE INATIVO';
+    END;
+    END IF;
+    INSERT INTO venda (cliente_id) VALUES (id_cliente);
+END;
+//
+DELIMITER ;
